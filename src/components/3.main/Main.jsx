@@ -11,15 +11,16 @@ const Main =()=>{
             <button>HTML</button>
             <button>HTML</button>
         </section>
-        <section className="right-section   ">
-            <article className="card  ">
+        <section className="right-section flex"> 
+          {["aa","bb","cc"].map((item)=>{
+            return(
+                <article key={item} className="card  ">
                 <img width={266} src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" alt="" />
-                <div style={{width:"266px"}} className="box border" >
+                <div style={{width:"266px"}} className="box " >
                     <h1 className="title">Software Developer & Web Enthusiast</h1>
                     <p className="sub-title">
                         Passionate about building modern, responsive, and user-friendly web applications.
-                        With a strong foundation in both front-end and back-end development, I strive to create
-                        clean and efficient code that brings ideas to life. Let’s turn your vision into reality.
+                        With a strong foundation in both 
                     </p>
                     <div className="icons flex">
                         <div style={{gap:"11px"}} className="flex">
@@ -33,6 +34,8 @@ const Main =()=>{
                     </div>
                 </div>
             </article>
+            )
+          })}
         </section>
       </main>
     );

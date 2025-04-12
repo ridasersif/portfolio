@@ -6,6 +6,7 @@ html {
     font-family: 'Roboto', sans-serif;
     box-sizing:border-box;
     letter-spacing: 0.1px;
+    scroll-behavior: smooth;
 }
 *,*:before, *:after{box-sizing: inherit;}
 *{
@@ -72,8 +73,32 @@ button{
 button:active{
  scale: .95;
 }
+
+.scrollToTop{
+  background-color: rgba(25,118,210,0.8); 
+  width:2.6rem;
+  height:2.6rem;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 2rem;
+  right: 3%;
+  text-align: center;
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+
+}
+.scrollToTop:hover{
+  cursor: pointer;
+  background-color: rgba(25,118,210,1); 
+
+
+}
 /**************************************************************/
 @media(max-width:800px){
+  .scrollToTop{
+    opacity: 0.4;
+    width: 2rem;
+    height: 2rem;
+  }
   .container{
     
     width: 90%;
@@ -86,6 +111,11 @@ button:active{
   }
 }
 @media(max-width:600px){
+  .scrollToTop{
+    opacity: 0.4;
+    width: 2rem;
+    height: 2rem;
+  }
   .container{
     
     width: 98%;
@@ -97,4 +127,5 @@ button:active{
     margin-left: -1.7rem;
   }
 }
+
 

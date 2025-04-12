@@ -8,6 +8,7 @@ const Hero =()=>{
                 <div className="parent-avatar flex">
                     <img className='avatar' src="./rida.png" alt="" />
                     <div className='icon-verified'></div>
+                    <h1>Rida Sersif</h1>
                 </div>
                 <h1 className="title">Software Developer & Web Enthusiast</h1>
                 <p className="sub-title">
