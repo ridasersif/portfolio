@@ -1,0 +1,119 @@
+header.flex{
+    justify-content: space-between;
+    padding: 0 2rem;
+    margin-top: 1rem;
+}
+header.flex nav{
+    background-color: var( --bgheader);
+    padding: .77rem 1.6rem;
+    border-radius: 55px;
+    box-shadow: 2px 2px 2px  var(--bordericone);
+
+}
+header.flex nav:hover{
+    
+    box-shadow: 2px 2px 2px var(--bordericonehover) ;
+ 
+}
+header ul.flex{
+    gap: 16px;
+}
+header ul li a{
+    color: var(--title);
+    opacity: 0.9;
+    font-size: .88rem;
+    font-weight: 500;
+}
+header ul li a:hover{
+    color: var(--blue);
+    opacity: 1;
+    font-size: .9rem;
+    font-weight: 500;
+}
+header button{
+    font-size: 1.2rem;
+}
+header .icon-th-menu-outline{
+    display: none;
+}
+
+header .fixed{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.756);
+    z-index: 11;
+    backdrop-filter: blur(2px);
+}
+@keyframes mymove{
+    0%{scale: 0;}
+
+    80%{scale: 1.1;}
+    100%{scale: 1;}
+}
+header .fixed ul.modal{
+    animation: mymove 1s 1 ;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--secondary);
+    box-shadow: 2px 2px 2px  var(--bordericone);
+}
+header .fixed ul.modal:hover{
+    box-shadow: 2px 2px 2px  var(--bordericonehover);
+}
+header .fixed ul.modal li{
+    border-bottom: 1px solid var(--bgheader);
+    padding-bottom: .77rem;
+    padding-top: .5rem;
+}
+header .fixed ul.modal li a{
+    font-size: 1rem;
+}
+header .fixed ul.modal li:last-child{
+    border: none;
+}
+header .fixed ul.modal li:first-child{
+   text-align: right;
+   border: none;
+   padding-bottom: 0;
+   padding-top: .2rem;
+}
+header .icon-moon, header .icon-th-menu-outline{
+    background-color: var(--bgheader);
+    height: 2.4rem;
+    width: 2.4rem;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    color: var(--subtitle);
+    border: 1px solid var(--bordericone);
+    transition: .2s;
+}
+header .icon-moon:hover, header .icon-th-menu-outline:hover{
+    color: var(--title);
+    border: 1px solid var(--bordericonehover);
+}
+header .icon-close{
+    font-size: 1.3rem;
+    color: var(--subtitle);
+    transition: 0.3s;
+  
+}
+header .icon-close:hover{
+    font-size: 1.6rem;
+   
+    color: crimson;
+    rotate: 180deg;
+}
+/***************************************************/
+@media (max-width:700px){
+    header.flex nav{
+        display: none;
+    }
+    header .icon-th-menu-outline{
+        display: block;
+    }
+}
